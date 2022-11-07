@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Number Guesser</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="game-container">
+              <header>
+                <h1>Can you beat the Robot?</h1>
+              </header>
+              
+              <p class="guess-label">Target Number: <span id="target-number">?</span></p>
+              <p class="round-label">Round <span id="round-number">1</span></p>
+
+              <div class="guessing-area">
+
+                <!-- Robot Guess  -->
+                <div class="guess robot-guess">
+                  <i class="fa-solid fa-robot"></i>
+                  <div class="guess-title">
+                    <p id="robot-guess">?</p>
+                    <p class="score-label">Score: <span id="robot-score">0</span></p>
+                    <p class="winning-text" id="robot-wins"></p>
+                  </div>
+                </div>
+            
+                <!-- Human Guess Section -->
+                <div class="guess human-guess">
+                  <i class="fa-regular fa-face-smile"></i>
+                  <div class="guess-title">
+                    <input type="number" id="human-guess" min=0 max=9 value=0>
+                    <p class="score-label">Score: <span id="human-score">0</span></p>
+                  </div>
+                
+                  
+                </div>
+              </div>
+
+          <div class="controls-container">
+
+              <div class="icon-container-one">
+                <i class="fa-solid fa-circle-radiation" style="color: rgb(160, 37, 37);"></i>
+                <i class="fa-solid fa-bolt" style="color: orange;"></i>
+                <i class="fa-solid fa-server" style="color: green;"></i>
+                <i class="fa-solid fa-server" style="color: red;"></i>
+              </div>
+          
+
+            <div class="round">
+              <div class="next-round-container">
+                <button class="button" id="next-round" disabled>Next Round</button>
+              </div>
+              <div class="icon-container-two">
+                <i class="fa-solid fa-sliders" style="color: rgb(55, 39, 39);"></i>
+                <i class="fa-solid fa-sliders" style="color: rgb(117, 44, 44);"></i>
+                <i class="fa-solid fa-sliders" style="color: rgb(56, 75, 56);"></i>
+                <i class="fa-solid fa-gauge-simple-high"  style="color: #fff; border: solid 6px black; border-radius: 25px;"></i>
+                <i class="fa-solid fa-gauge-simple"   style="color: #fff; border: solid 6px black; border-radius: 25px;"></i>
+                <i class="fa-solid fa-gauge-high"   style="color: #fff; border: solid 6px black; border-radius: 25px;"></i>
+              </div>
+            </div>
+
+              <div class="icon-container-three">
+                <i class="fa-solid fa-map-pin"></i>
+              </div>
+
+              <div class="number-controls">
+                <div class="add-minus-buttons">
+                <button class="number-control left" id="subtract" disabled>-</button>
+                <button class="number-control right" id="add">+</button>
+                </div>
+                <button class="button" id="guess">Make a Guess</button>
+              </div>
+
+          
+
+        </div>
+            
+
+   
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>

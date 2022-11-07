@@ -1,0 +1,283 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    margin: 0 auto;
+    padding: 3px;
+    background-color: #fff;
+    background-color: #192b3d;
+    color: #f8e69e;
+  }
+  
+  /* This wraps all the content */
+  .game-container {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Header: Can you beat the Robot? */
+  
+  header {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+  }
+
+   /* The target number styling */
+   .guess-label {
+    font-size: 30px;
+    font-weight: 700;
+    padding-top: 35px;
+    color: #f8e69e;
+    margin-bottom: 30px;
+  }
+
+
+
+  /* This will tell you what round we are on  */
+  
+  .round-label {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f8e69e;
+
+  }
+
+  /* Guessing container which wraps around robot and person */
+  
+    .guessing-area {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      margin-bottom: 60px;
+    }
+    
+
+  /* This class is for both the user and human */
+  
+  .guess {
+    min-width: 303px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 19px;
+    border-radius: 30px;
+    height: 250px;
+    box-shadow: 0 0 5px 2px;
+  }
+
+
+  /* Styling for Robot Guess */
+
+    
+  #robot-guess {
+    font-size: 80px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #a5a5a5;
+  }
+
+
+  .robot-guess {
+    font-size: 3rem;
+  }
+
+  .robot-guess i {
+    margin-bottom: 10px;
+  }
+
+  /* Styling for Human Guess */
+
+  
+  .human-guess {
+    font-size: 2.5rem;
+  }
+  
+  .guess input {
+    height: 80px;
+    width: 80px;
+    font-size: 60px;
+    text-align: center;
+    margin: 0 auto;
+    margin: 20px  0px;
+    border-radius: 5px;
+
+  }
+
+
+  
+  /* Score styling for both robot and human */
+  
+  .score-label {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: -10px;
+
+  }
+  
+
+  
+  .controls-container{
+    display: flex;
+    border: solid 5px black;
+    border-radius: 20px;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to right bottom, #a8b2c2, #9fa4b1, #9697a0, #8b8b8f, #7f7f7f);
+    margin-top: -30px;
+    height: 390px;
+
+  }
+
+
+  /* Styling for next round button aswell as styling for  */
+  
+  .round {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  /* The wrapper styling for the plus and minus controls */
+  
+  .number-controls {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* The styling for both the plus and minus controls */
+  
+  .number-control {
+    display: inline-block;
+    width: 85px;
+    height: 145px;
+    margin-top: -25px;
+    margin-bottom: 30px;
+    font-size: 44px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .number-controls button[disabled] {
+    color: #dfdfdf;
+  }
+
+  /* styling for the corners of number controls */
+  
+  .left {
+    border-top-left-radius: 22.5px;
+    border-bottom-left-radius: 22.5px;
+  }
+  
+  .right {
+    border-top-right-radius: 22.5px;
+    border-bottom-right-radius: 22.5px;
+    border-left-width: 0px;
+  }
+
+  /* Styling for making guesss button */
+
+  #guess {
+    padding: 20px;
+    width: 169px;
+    height: 59px;
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+    
+  }
+
+  /* The button styling for 'Make a Guess */
+    
+  .button {
+    color: #222;
+    cursor: pointer;
+
+  }
+
+  
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  
+  #next-round {
+    width: 160px;
+    height: 235px;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 60px 10px;
+    border: solid 5px rgb(1, 21, 1);
+    border-radius: 5px;
+    
+  }
+    
+  .button[disabled] {
+    background-color: #d2d2d2;
+    color: #a0a0a0;
+
+  }
+  
+  
+  .winning-text, .winning-text[disabled] {
+    color: red;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  /* Styling for Containers which have the icons  */
+
+
+  .icon-container-one {
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    height: 370px;
+    padding: 5px;
+    border: solid black 3px;
+    box-shadow: 0 0 10px darkolivegreen;
+    align-items: space-between;
+    justify-content: space-around;
+  }
+
+  .icon-container-two {
+    display: flex;
+    justify-content: space-between;
+    border: solid black ;
+    padding: 10px;
+    font-size: 40px;
+    margin-top: 30px;
+    width: 500px;
+    position: absolute;
+    top: 280px;
+    left: -20px;
+  }
+
+  .icon-container-three {
+    font-size: 130px;
+    border: solid;
+    margin-top: -20px;
+    width: 20px;
+    height: 100px;
+    position: relative;
+    color: rgb(78, 78, 78);
+  }
+
+  .icon-container-three i {
+    position: absolute;
+    left: -23px;
+    top: -75px;
+    color: #222;
+    transform: rotate(15deg);
+  }
